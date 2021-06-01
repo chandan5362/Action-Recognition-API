@@ -55,7 +55,6 @@ def recogniser(request):
 
             for i in range(frame_per_clip):
                 (grabbed, frame) =  stream.read()
-                print(len(frames_bbox))
                 if not grabbed:
                     data.update({'frames':frames_bbox, 'success' : True})
                     return JsonResponse(data)
@@ -100,9 +99,8 @@ def _grab_frames( path = None, url=None, video  = None):
     else:
         if url is not None:
             try:
-                print(type(url))
                 yt = YouTube(url)
-                print(yt)
+
             except:
                 stream = None
                 print("Video not read")
@@ -111,11 +109,11 @@ def _grab_frames( path = None, url=None, video  = None):
             #store the video in current directory
             try:
                 yt = yt.streams.filter(file_extension = 'mp4')[0]
-                print(yt)
                 st = yt.download(output_path = '{base_path}/models/'.format(base_path = os.path.abspath(os.path.dirname(__file__))))
                 os.rename(st, '{base_path}/models/test_video.mp4'.format(base_path = os.path.abspath(os.path.dirname(__file__))))
             except:
                 stream = None
+                
             source = '{base_path}/models/test_video.mp4'.format(base_path = os.path.abspath(os.path.dirname(__file__)))
             ffmpeg_extract_subclip(source, 10, 30, targetname='{base_path}/models/test.mp4'.format(base_path = os.path.abspath(os.path.dirname(__file__))))
             title = '{base_path}/models/test.mp4'.format(base_path = os.path.abspath(os.path.dirname(__file__)))
