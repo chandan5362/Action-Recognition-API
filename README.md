@@ -30,6 +30,10 @@ install the dependencies from the `requirements.txt`. Go to the root directory a
 
 `pip install -r requirements.txt`
 
+You also nedd to install the `OpenCV` depending upon your system. To install it using `pip`, type the following command in your terminal.
+
+`pip install opencv-python`
+
 Once you are done installing the dependencies, You need to start the django server to communicate to the `Human Action Recognition` api. 
 To start the server, you can type in the below command.
 
