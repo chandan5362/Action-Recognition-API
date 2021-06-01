@@ -59,4 +59,4 @@ Note that all the above mentioned command line arguments are completely optional
 # TODO:
 * As of now, the `OpenCV` uses single core for frame extraction and decoding. So, our api only extracts the `20s` video to perform action recognition. The server might crash if you pass the video longer than `40s`.
 * We can make our code more efficient using multiprocessing with `OpenCV`. I will update the code in few days. Untill then, if you want to make it more efficient, you are most welcome.
-* Also, there is limitation on `fps` also. As of now, we have constrained the `fps` for video processing only upt `16fps`. So, this is good idea to start with. 
+* Also, there is limitation on `fps` also. As of now, we have constrained the `fps` for video processing only upto `16fps`. So, this is good idea to start with. 
