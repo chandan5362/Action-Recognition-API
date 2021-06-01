@@ -55,7 +55,7 @@ If you want to perform the action recognition on any `YouTube` video, type in th
 
 `python test_action.py -l link_to_the_youtube_video`
 
-Note that all the above mentioned command line arguments are completely optional. If you are in hurry, and you want to check whether this code is working or not, then I am here to make your life more easier.  I have already included a sample video i case you want to go lazy. Just run the `test_action.py` using ususal python command.
+Note that all the above mentioned command line arguments are completely optional. If you are in hurry, and you want to check whether this code is working or not, then I am here to make your life more easier.  I have already included a sample video in case you want to go lazy. Just run the `test_action.py` using ususal python command.
 
 `python test_action.py`
 
